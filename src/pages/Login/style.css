@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  color: #0d5c63;
+}
+
+.form-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

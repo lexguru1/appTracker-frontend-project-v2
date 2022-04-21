@@ -1,0 +1,21 @@
+.hero-banner {
+  width: 100%;
+  background-color: aliceblue;
+  min-height: 300px;
+  padding: 100px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  color: #0d5c63;
+  flex-wrap: wrap;
+}
+
+a,
+a:hover,
+a:link,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: #0d5c63 !important;
+}
