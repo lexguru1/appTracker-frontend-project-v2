@@ -57,4 +57,19 @@ export const deleteApplication = (id) => {
   };
 };
 
+export const updateApplication = (id, status) => {
+  return async (dispatch, getState) => {
+    dispatch(applicationsLoading());
+    try {
+      const response = await axios.patch(`${apiUrl}/applications/${id}`, {
+        status,
+      });
+      dispatch(applicationsDoneLoading(response.data));
+      dispatch(fetchApplications());
+    } catch (e) {
+      return e.message;
+    }
+  };
+};
+
 export const clearApplications = () => ({ type: LOG_OUT });

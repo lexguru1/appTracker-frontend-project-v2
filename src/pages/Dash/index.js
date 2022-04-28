@@ -121,7 +121,7 @@ export default function Dashboard() {
           </Form.Group>
 
           <Form.Group controlId="formBasicStatus" className="form-padding">
-            ShowSuccessMessage
+            Status
             <Form.Select
               aria-label="Default select example"
               onChange={(e) => setStatus(e.target.value)}
