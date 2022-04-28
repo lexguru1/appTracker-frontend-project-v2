@@ -1,12 +1,13 @@
 import { apiUrl } from "../../config/constants";
 import axios from "axios";
-import { selectToken } from "./selectors";
+import { selectToken, selectUserId } from "./selectors";
 import {
   appLoading,
   appDoneLoading,
   showMessageWithTimeout,
   setMessage,
 } from "../appState/actions";
+import { fetchApplications } from "../applicationsList/actions";
 
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const TOKEN_STILL_VALID = "TOKEN_STILL_VALID";
@@ -39,6 +40,7 @@ export const signUp = (name, email, password) => {
       dispatch(loginSuccess(response.data));
       dispatch(showMessageWithTimeout("success", true, "account created"));
       dispatch(appDoneLoading());
+      dispatch(fetchApplications());
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);
@@ -64,6 +66,7 @@ export const login = (email, password) => {
       dispatch(loginSuccess(response.data));
       dispatch(showMessageWithTimeout("success", false, "welcome back!", 1500));
       dispatch(appDoneLoading());
+      dispatch(fetchApplications());
     } catch (error) {
       if (error.response) {
         console.log(error.response.data.message);
@@ -96,6 +99,7 @@ export const getUserWithStoredToken = () => {
       // token is still valid
       dispatch(tokenStillValid(response.data));
       dispatch(appDoneLoading());
+      dispatch(fetchApplications());
     } catch (error) {
       if (error.response) {
         console.log(error.response.message);

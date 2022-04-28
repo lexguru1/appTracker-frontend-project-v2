@@ -19,7 +19,7 @@ export default function SignUp() {
 
   useEffect(() => {
     if (token !== null) {
-      navigate("/");
+      navigate("/dashboard");
     }
   }, [token, navigate]);
 

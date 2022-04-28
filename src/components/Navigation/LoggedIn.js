@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import { selectUser } from "../../store/user/selectors";
 import Nav from "react-bootstrap/Nav";
 import NavbarItem from "./NavbarItem";
-import { Navigate } from "react-router-dom";
+import { logOutLists } from "../../store/appList/actions";
 
 export default function LoggedIn() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export default function LoggedIn() {
       </Nav.Item>
       <Button
         onClick={() => {
-          dispatch(logOut());
+          dispatch(logOut(), logOutLists());
         }}
         style={{ backgroundColor: "#0d5c63", border: "0px" }}
       >

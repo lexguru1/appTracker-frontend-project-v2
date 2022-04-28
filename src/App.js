@@ -8,13 +8,14 @@ import MessageBox from "./components/MessageBox";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
-import Dashboard from "./pages/Dashboard";
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
 import { getUserWithStoredToken } from "./store/user/actions";
 
 import Home from "./pages/Home";
+import Dash from "./pages/Dash";
+import { fetchApplications } from "./store/applicationsList/actions";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ function App() {
       {isLoading ? <Loading /> : null}
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/dashboard" element={<Dash />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
       </Routes>
