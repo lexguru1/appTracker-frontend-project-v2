@@ -55,6 +55,7 @@ export default function JobCard(props) {
           </Form.Group>
 
           <Form.Group controlId="formBasicStatus" className="form-padding">
+            <Form.Label>Status</Form.Label>
             <Form.Select
               aria-label="Default select example"
               onChange={(e) => setStatus(e.target.value)}
