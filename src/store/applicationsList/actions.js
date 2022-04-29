@@ -72,4 +72,6 @@ export const updateApplication = (id, status) => {
   };
 };
 
+export const logOutLists = () => ({ type: LOG_OUT });
+
 export const clearApplications = () => ({ type: LOG_OUT });
