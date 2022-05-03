@@ -19,7 +19,13 @@ export default function Home() {
               </p>
               <Link
                 to="/signup"
-                style={{ textAlign: "center", color: "#0d5c63" }}
+                style={{
+                  textAlign: "center",
+                  color: "#0d5c63",
+                  border: "1.5px solid #0d5c63",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
                 className="form-padding"
               >
                 Click here to sign up
