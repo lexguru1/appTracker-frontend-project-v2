@@ -16,17 +16,13 @@ export default function Home() {
                 appTracker is the all-in-one job application tracking solution
                 that makes every step of your job search easier.{" "}
               </p>
-              <Button
-                href="https://apptracker-codaisseur.netlify.app/signup"
-                className="call-to-action"
-                style={{
-                  backgroundColor: "white",
-                  width: "200px",
-                  borderColor: "#0d5c63",
-                }}
+              <Link
+                to="/signup"
+                style={{ textAlign: "center", color: "#0d5c63" }}
+                className="form-padding"
               >
-                Try it for free
-              </Button>
+                Click here to sign up
+              </Link>
             </div>
           </div>
           <div className="main-homepage-container-image"></div>
