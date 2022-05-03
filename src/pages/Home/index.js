@@ -1,6 +1,7 @@
 import "./styles.css";
 import { Button } from "react-bootstrap";
 import { image } from "../../assets/jason-goodman-X8H8vPcelPk-unsplash.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
