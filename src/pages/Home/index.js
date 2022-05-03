@@ -17,7 +17,7 @@ export default function Home() {
                 that makes every step of your job search easier.{" "}
               </p>
               <Button
-                href="/signup"
+                href="https://apptracker-codaisseur.netlify.app/signup"
                 className="call-to-action"
                 style={{
                   backgroundColor: "white",
